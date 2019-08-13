@@ -1,17 +1,13 @@
 from rest_framework import viewsets
 
-from .serializers import PostSerializer
-from .serializers import SlideShowSerializer
-from .serializers import StaffSerializer
+from .serializers import SlideShowSerializer, StaffSerializer, AwardSerializer, AboutSerializer, ProjectSerializer
 
-from posts.models import Post
 from slideshow.models import SlideShow
 from staff.models import Staff
+from awards.models import Award
+from about.models import About
+from projects.models import Project
 
-
-class PostViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
 
 class SlideShowViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = SlideShow.objects.all()
@@ -20,3 +16,15 @@ class SlideShowViewSet(viewsets.ReadOnlyModelViewSet):
 class StaffViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Staff.objects.all()
     serializer_class = StaffSerializer
+
+class AwardViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Award.objects.all()
+    serializer_class = AwardSerializer
+
+class AboutViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = About.objects.all()
+    serializer_class = AboutSerializer
+
+class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer

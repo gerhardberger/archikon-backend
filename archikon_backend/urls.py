@@ -23,9 +23,11 @@ from rest_framework import routers
 from archikon_backend import views
 
 router = routers.DefaultRouter()
-router.register(r'posts', views.PostViewSet)
 router.register(r'slideshows', views.SlideShowViewSet)
 router.register(r'staff', views.StaffViewSet)
+router.register(r'awards', views.AwardViewSet)
+router.register(r'about', views.AboutViewSet)
+router.register(r'projects', views.ProjectViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
