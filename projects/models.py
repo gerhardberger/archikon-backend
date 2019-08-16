@@ -8,9 +8,11 @@ class Project(models.Model):
     location_en = models.CharField(max_length=100)
     country_hu = models.CharField(max_length=50)
     country_en = models.CharField(max_length=50)
-    type = models.CharField(max_length=100)
     description_hu = models.TextField()
     description_en = models.TextField()
+    selected = models.BooleanField(default=False)
+    listed = models.BooleanField(default=False)
+    category = models.CharField(max_length=100, blank=True)
     thumbnail = models.ImageField(upload_to='projects/')
 
     def __str__(self):

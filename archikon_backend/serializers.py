@@ -14,7 +14,7 @@ class SlideShowSerializer(serializers.HyperlinkedModelSerializer):
 class StaffSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Staff
-        fields = ['id', 'name', 'title_hu', 'title_en', 'email', 'phone', 'leader', 'image']
+        fields = ['id', 'name', 'title_hu', 'title_en', 'email', 'phone', 'leader', 'image', 'active']
 
 class AwardSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -37,4 +37,5 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Project
         fields = ['id', 'name_hu', 'name_en', 'location_hu', 'location_en', 'country_hu',
-            'country_en', 'type', 'description_hu', 'description_en', 'thumbnail', 'images']
+            'country_en', 'category', 'description_hu', 'description_en', 'thumbnail', 'images',
+            'selected', 'listed']
