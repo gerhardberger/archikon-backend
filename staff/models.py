@@ -6,7 +6,7 @@ class Staff(models.Model):
     title_hu = models.CharField(max_length=100)
     title_en = models.CharField(max_length=100)
     email = models.CharField(max_length=30)
-    phone = models.CharField(max_length=30)
+    phone = models.CharField(max_length=100)
     leader = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
     image = models.ImageField(upload_to='staff/', null=True, blank=True)
