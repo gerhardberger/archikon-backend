@@ -10,6 +10,7 @@ class Project(models.Model):
     country_en = models.CharField(max_length=50)
     description_hu = models.TextField()
     description_en = models.TextField()
+    year = models.IntegerField()
     selected = models.BooleanField(default=False)
     listed = models.BooleanField(default=False)
     category = models.CharField(max_length=100, blank=True)

@@ -38,4 +38,4 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
         model = Project
         fields = ['id', 'name_hu', 'name_en', 'location_hu', 'location_en', 'country_hu',
             'country_en', 'category', 'description_hu', 'description_en', 'thumbnail', 'images',
-            'selected', 'listed']
+            'selected', 'listed', 'year']
