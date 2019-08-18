@@ -8,6 +8,6 @@ class ProjectImageInline(admin.TabularInline):
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name_hu',]
     inlines = [ProjectImageInline]
 
-# admin.site.register(Project)
