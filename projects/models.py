@@ -12,7 +12,7 @@ class Project(models.Model):
     description_en = models.TextField()
     year = models.CharField(max_length=50)
     selected = models.BooleanField(default=False)
-    listed = models.BooleanField(default=False)
+    listed = models.BooleanField(default=False, verbose_name="Project page")
     category = models.CharField(max_length=100, blank=True)
     thumbnail = models.ImageField(upload_to='projects/', null = True, blank=True)
 
