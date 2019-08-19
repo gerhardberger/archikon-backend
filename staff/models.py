@@ -9,6 +9,8 @@ class Staff(models.Model):
     phone = models.CharField(max_length=100)
     leader = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
+    description_hu = models.TextField(null = True, blank=True)
+    description_en = models.TextField(null = True, blank=True)
     image = models.ImageField(upload_to='staff/', null=True, blank=True)
 
     def __str__(self):
