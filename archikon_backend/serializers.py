@@ -9,7 +9,7 @@ from projects.models import Project, ProjectImageModel
 class SlideShowSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = SlideShow
-        fields = ['id', 'image']
+        fields = ['id', 'image', 'url']
 
 class StaffSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
