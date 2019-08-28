@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -139,3 +138,5 @@ CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ['*']
 
 FILE_UPLOAD_PERMISSIONS = 0o644
+
+SECURE_SSL_REDIRECT = True
