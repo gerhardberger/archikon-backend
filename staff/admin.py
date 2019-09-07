@@ -1,8 +1,9 @@
 from django.contrib import admin
+from adminsortable.admin import SortableAdmin
 
 from .models import Staff
 
 @admin.register(Staff)
-class StaffAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name',]
+class StaffAdmin(SortableAdmin):
+    list_display = ['name',]
 

@@ -9,13 +9,13 @@ from projects.models import Project, ProjectImageModel
 class SlideShowSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = SlideShow
-        fields = ['id', 'image', 'url']
+        fields = ['id', 'image', 'url', 'order']
 
 class StaffSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Staff
         fields = ['id', 'name', 'title_hu', 'title_en', 'email', 'phone', 'leader',
-            'image', 'active', 'description_hu', 'description_en']
+            'image', 'active', 'description_hu', 'description_en', 'order']
 
 class AwardSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -39,4 +39,4 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
         model = Project
         fields = ['id', 'name_hu', 'name_en', 'location_hu', 'location_en', 'country_hu',
             'country_en', 'category', 'description_hu', 'description_en', 'thumbnail', 'images',
-            'selected', 'listed', 'year']
+            'selected', 'listed', 'year', 'order']

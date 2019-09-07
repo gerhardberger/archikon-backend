@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'projects.apps.ProjectsConfig',
     'corsheaders',
+    'adminsortable',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +68,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.static',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -139,4 +141,4 @@ ALLOWED_HOSTS = ['*']
 
 FILE_UPLOAD_PERMISSIONS = 0o644
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True

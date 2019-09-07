@@ -1,7 +1,8 @@
 from django.db import models
+from adminsortable.models import SortableMixin
 
 
-class Staff(models.Model):
+class Staff(SortableMixin):
     name = models.CharField(max_length=40)
     title_hu = models.CharField(max_length=100)
     title_en = models.CharField(max_length=100)
@@ -12,6 +13,10 @@ class Staff(models.Model):
     description_hu = models.TextField(null = True, blank=True)
     description_en = models.TextField(null = True, blank=True)
     image = models.ImageField(upload_to='staff/', null=True, blank=True)
+    order = models.PositiveIntegerField(default=0, editable=False, db_index=True)
+
+    class Meta:
+        ordering = ['order']
 
     def __str__(self):
-        return str(self.id)
+        return self.name
