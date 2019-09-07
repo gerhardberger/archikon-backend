@@ -16,7 +16,7 @@ class Project(SortableMixin):
     listed = models.BooleanField(default=False, verbose_name="Project page")
     category = models.CharField(max_length=100, blank=True)
     thumbnail = models.ImageField(upload_to='projects/', null = True, blank=True)
-    order = models.PositiveIntegerField(default=0, editable=False)
+    order = models.PositiveIntegerField(default=0, editable=False, db_index=True)
 
     class Meta:
         ordering = ['order']
