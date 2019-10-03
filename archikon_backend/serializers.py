@@ -4,6 +4,7 @@ from slideshow.models import SlideShow
 from staff.models import Staff
 from awards.models import Award
 from about.models import About
+from contact.models import Contact
 from projects.models import Project, ProjectImageModel
 
 class SlideShowSerializer(serializers.HyperlinkedModelSerializer):
@@ -31,6 +32,11 @@ class ProjectImageModelSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ProjectImageModel
         fields = ['image']
+
+class ContactSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Contact
+        fields = ['title_hu', 'title_en', 'info_hu', 'info_en']
 
 class ProjectSerializer(serializers.HyperlinkedModelSerializer):
     images = ProjectImageModelSerializer(many=True, read_only=True)

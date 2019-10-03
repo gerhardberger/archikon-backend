@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'staff.apps.StaffConfig',
     'awards.apps.AwardsConfig',
     'about.apps.AboutConfig',
+    'contact.apps.ContactConfig',
     'projects.apps.ProjectsConfig',
     'corsheaders',
     'adminsortable',

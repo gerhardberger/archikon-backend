@@ -1,11 +1,12 @@
 from rest_framework import viewsets
 
-from .serializers import SlideShowSerializer, StaffSerializer, AwardSerializer, AboutSerializer, ProjectSerializer
+from .serializers import SlideShowSerializer, StaffSerializer, AwardSerializer, AboutSerializer, ProjectSerializer, ContactSerializer
 
 from slideshow.models import SlideShow
 from staff.models import Staff
 from awards.models import Award
 from about.models import About
+from contact.models import Contact
 from projects.models import Project
 
 
@@ -28,3 +29,7 @@ class AboutViewSet(viewsets.ReadOnlyModelViewSet):
 class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+
+class ContactViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Contact.objects.all()
+    serializer_class = ContactSerializer
